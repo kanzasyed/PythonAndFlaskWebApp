@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block main %}
 <p>Some content about page</p>
-<form action="/about" method="POST">
+<form action="{{ url_for('add') }}" method="POST">
     {{ form.csrf_token }}
     {{ form.title.label}}
     {{ form.title}}
